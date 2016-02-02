@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
+  <title>Programe books Online store</title>
+  <%= stylesheet_link_tag "depot", :media => "all" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="store">
 
-<%= yield %>
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic bookshelf" %>
+  </div>
+
+  <div id="columns">
+    <div id="side">
+      <a href="http://192.168.20.139:3000">Home</a><br/>
+      <a href="http://192.168.20.139:3000/product">Products</a><br>
+    </div>
+  </div>
+
+  <div id="main">
+    <%= yield %>
+  </div>
+
 
 </body>
 </html>
