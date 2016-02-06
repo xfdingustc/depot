@@ -1,0 +1,2 @@
+//$('<span class="error-message"><%= escape_javascript('fuck') %></span>').appendTo($('#cart'))
+$('#cart').html('<%= j(render :partial => @cart) %>')

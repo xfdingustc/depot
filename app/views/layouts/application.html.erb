@@ -10,12 +10,14 @@
 <body id="store">
 
   <div id="banner">
-    <%= image_tag("logo.png") %>
     <%= @page_title || "Pragmatic bookshelf" %>
   </div>
 
   <div id="columns">
     <div id="side">
+      <div id="cart">
+        <%= render @cart %>
+      </div>
       <a href="http://192.168.20.139:3000">Home</a><br/>
       <a href="http://192.168.20.139:3000/product">Products</a><br>
     </div>
